@@ -2,14 +2,14 @@ import mongoose from "mongoose";
 
 const pasajeroSchema = new mongoose.Schema({
   cedula: {
-    type: Number, // Cambiado a Number (tipo válido de Mongoose)
-    required: true, // Cambiado de 'require' a 'required'
-    unique: true, // Opcional: garantiza que la cédula sea única
+    type: Number, 
+    required: true, 
+    unique: true, 
   },
   nombre: {
-    type: String, // Cambiado a String (tipo válido de Mongoose)
+    type: String, 
     required: true,
-    trim: true, // Elimina espacios en blanco al inicio y final
+    trim: true, 
   },
   apellido: {
     type: String,
@@ -17,16 +17,16 @@ const pasajeroSchema = new mongoose.Schema({
     trim: true,
   },
   telefono: {
-    type: String, // Cambiado a String, ya que los números de teléfono pueden incluir símbolos
+    type: String, 
     required: true,
     trim: true,
   },
   email: {
     type: String,
     required: true,
-    unique: true, // Asegura que los correos sean únicos
+    unique: true, 
     trim: true,
-    match: [/^\S+@\S+\.\S+$/, "El correo no es válido"], // Validación de formato de email
+    match: [/^\S+@\S+\.\S+$/, "El correo no es válido"], 
   },
 });
 
