@@ -1,9 +1,9 @@
 import dotenv from "dotenv";
-dotenv.config(); // Carga las variables de entorno desde .env
+dotenv.config();
 
 import app from "./app.js";
 import { connectDB } from "./dbs.js";
-import { PORT } from "./config.js"; // Importa PORT
+import { PORT } from "./config.js"; 
 
 async function main() {
     try {
