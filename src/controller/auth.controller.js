@@ -57,17 +57,17 @@ export const create = async (req, res) => {
             rol: userSaved.rol,
         });
     } catch (error) {
-        // Manejar errores de validación
+        
         if (error.name === "ValidationError") {
             return res.status(400).json({ message: error.message });
         }
 
-        // Manejar errores de duplicación de clave (índice único)
+        
         if (error.code === 11000) {
             return res.status(400).json({ message: "El correo ya está registrado" });
         }
 
-        // Manejar otros errores
+       
         return res.status(500).json({ message: "Error del servidor" });
     }
 };
