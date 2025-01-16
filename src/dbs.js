@@ -3,7 +3,7 @@ import { MONGODB_URI } from "./config.js";
 
 export async function connectDB() {
     try {
-        await mongoose.connect(MONGODB_URI); // Sin las opciones obsoletas
+        await mongoose.connect(MONGODB_URI); 
         console.log("Conexión a MongoDB exitosa");
     } catch (error) {
         console.error("Error al conectar a MongoDB:", error);
