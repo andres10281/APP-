@@ -7,9 +7,9 @@ const userSchema = new mongoose.Schema({
     email: {
         type: String,
         required: true,
-        unique: true, // Asegura que los correos sean únicos
+        unique: true, 
         trim: true,
-        match: [/^\S+@\S+\.\S+$/, 'El correo no es válido'], // Validación de formato de email
+        match: [/^\S+@\S+\.\S+$/, 'El correo no es válido'], 
     },
    
     contraseña: {
@@ -18,7 +18,7 @@ const userSchema = new mongoose.Schema({
     },
     rol: {
         type: String,
-        enum: ['Usuario', 'Administrador', 'Super Administrador'], // Roles permitidos
+        enum: ['Usuario', 'Administrador', 'Super Administrador'], 
         default: 'Usuario', // Rol predeterminado
     },
     
