@@ -1,0 +1,6 @@
+{
+  "id_pasajero": "12345",
+  "fecha_reserva": "2023-10-15",
+  "estado_reserva": "confirmed",
+  "destino": "New York"
+}

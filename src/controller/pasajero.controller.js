@@ -1,7 +1,7 @@
 import pasajero from "../models/pasajero.model.js";
 
 
-// http://localhost:4000/api/createPasajero
+// Crear un pasajero	POST	http://localhost:4000/api/createPasajero
 export const createPasajero = async (req, res) => {
     try {
       const { cedula, nombre, apellido, telefono, email } = req.body;
@@ -27,7 +27,7 @@ export const createPasajero = async (req, res) => {
     }
   };
   
-  //http://localhost:4000/api/getPasajeros
+  //Buscar todos	GET	http://localhost:4000/api/getPasajeros
   export const getPasajeros = async (req, res) => {
     try {
       const pasajeros = await pasajero.find();
@@ -38,7 +38,7 @@ export const createPasajero = async (req, res) => {
     }
   }
 
-//http://localhost:4000/api/updatePasajero
+//Actualizar un pasajero	PUT	http://localhost:4000/api/updatePasajero/:id
   export const updatePasajero = async (req, res) => {
     try {
       const { cedula, nombre, apellido, telefono, email } = req.body;
@@ -53,7 +53,7 @@ export const createPasajero = async (req, res) => {
     } 
     };
 
-//http://localhost:4000/api/deletePasajero
+//Eliminar un pasajero	DELETE	http://localhost:4000/api/deletePasajero/:id
 export const deletePasajero = async (req, res) => {
     try {
       const { id } = req.params;
